@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Bus_Station
 {
-
-    
-    class Program
+    class BusModel
     {
-        static void Main(string[] args)
-        {
-            var mainController =  new MainController()
-        }
+            public string Name { get; }
+
+            public int Capacity { get; }
+
+            public BusModel
+            
+        
     }
 }
