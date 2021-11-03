@@ -4,19 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bus_Station
+namespace BusStation
 {
     public class InputComponent
     {
         public int GetInputInt()
         {
-            Console.WriteLine("Enter integer, and press Enter");
-            var userChoice = Console.ReadLine();
-            var isParsed = int.TryParse(userChoice, out var intValue);
-            if(isParsed)
+            bool isParsed;
+            int result;
+            do
             {
-                return intValue;
+                Console.WriteLine("Enter integer, and press Enter");
+                var userChoice = Console.ReadLine();
+                isParsed = int.TryParse(userChoice, out result);
             }
+            while (!isParsed);
+             return result;
         }
     }
 }

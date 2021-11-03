@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bus_Station
+namespace BusStation
 {
     
     public class TripsStorage
@@ -12,6 +12,8 @@ namespace Bus_Station
         public static List <TripModel> Trips = new List<TripModel>
         {
             new TripModel(1, new DateTime(2022,1,1), "Vinnitsa", new DateTime(2022,1,2), "Harkiv", new BusModel("Ikarus", 40),1500),
+            new TripModel(2, new DateTime(2022,1,6), "Kyiv", new DateTime(2022,1,7), "Bukovel", new BusModel("Bohdan", 20), 500),
+            new TripModel(3, new DateTime(2022,1,13), "Kurvamat", new DateTime(2022,1,15), "Ternopil", new BusModel("Sprinter", 18), 1200)
         };
     }
 }

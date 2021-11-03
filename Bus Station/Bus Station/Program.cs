@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bus_Station
+namespace BusStation
 {
 
     
@@ -12,7 +12,11 @@ namespace Bus_Station
     {
         static void Main(string[] args)
         {
-            var mainController =  new MainController()
+            var mainController = new MainController();
+            while (true)
+            {
+                MainController.Run();
+            }
         }
     }
 }

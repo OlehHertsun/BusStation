@@ -4,18 +4,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bus_Station
+namespace BusStation
 {
     public class MainController
     {
+        private readonly InputComponent _input;
+        private readonly MainMenuController _menuController;
 
-        public MainController()
+        public  MainController()
         {
-            _input = new 
+            _input = new InputComponent();
+            _menuController = new MainMenuController();
+
+
         }
+
         public void Run()
         {
-
+            _menuController.ShowMainMenu();
+            var result = _input.GetInputInt();
+            switch (result)
+            {
+                case 1:
+                    _menuController.ShowTripsTable();
+                    break;
+                case 2:
+                    Console.WriteLine("SHOW FIND BY ID");
+                    break;
+            }
         }
     }
 }

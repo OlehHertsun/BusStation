@@ -4,16 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bus_Station
+namespace BusStation
 {
     class BusModel
     {
-            public string Name { get; }
+        public string Name { get; }
 
-            public int Capacity { get; }
+        public int Capacity { get; }
 
-            public BusModel
-            
-        
+        private int _numOfPassengers = 0;
+
+        public BusModel(string name, int capacity)
+        {
+            Name = name;
+            Capacity = capacity;
+        }
+
     }
 }
